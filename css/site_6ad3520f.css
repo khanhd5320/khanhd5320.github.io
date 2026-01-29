@@ -106,3 +106,15 @@
     cursor: pointer;
 }
 
+
+.ask-selection {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile banner images equal height */
+.flex.md\:hidden.w-full.h-\[500px\] img {
+    height: 100% !important;
+    object-fit: cover;
+}

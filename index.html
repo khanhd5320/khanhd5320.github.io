@@ -30,6 +30,11 @@
     <link rel="icon" href="./images/favicon.ico">
     <meta name="next-size-adjust">
     <style id="_goober">
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         @keyframes fadeLeft {
             from {
                 opacity: 0;
@@ -1600,6 +1605,7 @@
         }
     </style>
     <link rel="stylesheet" href="./css/AddEventModal.css" id="add-event-modal-styles">
+    <link rel="stylesheet" href="./css/animations.css">
 </head>
 <body>
     <header>
@@ -1639,12 +1645,12 @@
                             </div>
 
                             <!-- Names -->
-                            <div class="text-[40px] md:text-[64px] lg:w-[620px] mt-[56px] md:mt-[14px] text-center leading-none uppercase"
+                            <div class="text-[40px] md:text-[64px] lg:w-[620px] mt-[56px] md:mt-[14px] text-center leading-tight uppercase"
                                  style="font-family: CormorantUnicase;">
                                 <div>Quốc Khánh</div>
-                                <p class="h-[50px] font-Corinthia text-[96px]"
+                                <p class="font-Corinthia text-[96px] leading-[1]"
                                    style="color: rgb(230, 208, 175);">&amp;</p>
-                                <div>Minh Anh</div>
+                                <div style="margin-top: -24px;">Minh Anh</div>
                             </div>
 
                             <!-- Date -->
@@ -1658,12 +1664,23 @@
                             </div>
                         </div>
 
+                        <!-- ===== MOBILE IMAGES ===== -->
+                        <div class="md:hidden mb-10 grid grid-cols-2 h-[367px]">
+                            <img src="./images/khanh_anh_1769017914_5566.webp"
+                                 class="w-full h-full object-cover animate-left"
+                                 alt="Banner image 1" />
+                            <img src="./images/IMG_3923_1769017923_3763.png"
+                                 class="w-full h-full object-cover animate-right"
+                                 alt="Banner image 2" />
+                        </div>
+
                         <!-- ===== IMAGE RIGHT ===== -->
-                        <div class="relative md:block hidden max-h-[745px] animate-right">
+                        <div class="relative hidden md:block max-h-[745px] animate-right">
                             <img src="./images/IMG_3923_1769017923_3763.png"
                                  class="w-full h-full object-cover"
                                  alt="Banner image 2" />
                         </div>
+
 
                     </section>
                 </section>
@@ -1673,7 +1690,7 @@
                     <section class="relative bg-white font-CormorantUnicase">
                         <section class="max-w-9xl md:mt-0 mt-[350px] mx-auto pt-[20px] pb-[60px] px-[15px] md:px-[85px] md:py-[120px] relative grid gap-[30px]" style="opacity: 1;">
                             <div class=" flex flex-col justify-center items-center text-center gap-[10px]">
-                                <div class="text-center" style="opacity: 1; transform: none;">
+                                <div class="text-center fade-in-section">
                                     <div class="relative">
                                         <div contenteditable="false" id="invitation-title-invitation" class="
           p-2
@@ -1688,7 +1705,7 @@
           " style="font-family: CormorantUnicase;">Sự hiện diện của bạn là niềm vinh dự của chúng tôi!</div>
                                     </div>
                                 </div>
-                                <div class="w-full md:w-auto" style="opacity: 1; transform: none;">
+                                <div class="w-full md:w-auto scale-in">
                                     <div class="  relative max-w-[526px] max-h-[120px] md:max-w-[836px] md:max-h-[261px] z-1"><img class="w-full h-full z-10 object-cover  max-w-[518px] max-h-[120px] md:max-w-[828px] md:max-h-[261px]  border-transparent    " alt="Wedding couple" id="invitation-imageBanner" src="./images/khanh_anh_thumnail.jpg" loading="lazy" draggable="false" style="object-position: 50% 50%; transform: scale(1); transform-origin: center center; opacity: 1; transition: opacity 0.15s ease-in-out;"></div><div class="relative mt-8 md:px-[115px] py-[6px] font-EncodeSans">
                                         <img src="./images/bg1.png" class="absolute top-0 left-0 w-full h-[121px] md:h-[160px] opacity-60"><div class="relative">
                                             <div contenteditable="false" id="invitation-time-invitation" class="
@@ -1730,7 +1747,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="w-full md:w-auto" style="opacity: 1; transform: none;">
+                                <div class="w-full md:w-auto scale-in">
                                     <div class="relative md:px-[115px] py-[6px] font-EncodeSans">
                                         <img src="./images/bg-date-banner-1.png" class="absolute top-0 left-0 w-full h-[121px] md:h-[160px] opacity-60"><div class="relative">
                                             <div contenteditable="false" id="invitation-time-invitation" class="
@@ -1770,7 +1787,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="md:min-w-[580px] w-full flex md:flex-row flex-col justify-center items-center gap-4 md:gap-10" style="opacity: 1; transform: none;">
+                                <div class="md:min-w-[580px] w-full flex md:flex-row flex-col justify-center items-center gap-4 md:gap-10 scale-in">
                                     <a href="https://forms.gle/xdFrRACipBdRutbD8" class="text-decoration-none" target="_blank">
                                         <div class="w-full md:w-[250px] text-lg text-white px-6 py-4" style="background: rgb(84, 95, 27);" aria-disabled="true">GỬI LỜI CHÚC</div>
                                     </a>
@@ -1915,7 +1932,7 @@
                                             </div>
                                             <div class="flex justify-center items-center"><div class="w-[1px] rounded-full h-[70px] md:h-[133px] flex" style="background: rgb(230, 208, 175);"></div></div>
                                         </div>
-                                        <div class="ask-selection flex bg-transparent w-[200px] ">
+                                        <div class="ask-selection flex bg-transparent w-[200px] mx-auto">
                                             <div class="ask-option" style="background-color: rgb(84, 95, 27);">
                                                 <a target="_blank" href="https://maps.app.goo.gl/N38iUdkV1P4T8bTZA">
                                                     <div class="uppercase text-[#EEDED1] px-2 py-2 font-bold text-base w-full md:w-[150px] opacity-50" aria-disabled="true">
@@ -1949,7 +1966,7 @@
                                                 <div class="text-[18px] md:text-[24px] uppercase" style="color: rgb(84, 95, 27);">(2 Ng. 16 P. Định Công Hạ, Định Công Hạ, Hà Nội)</div>
                                             </div>
                                             <div class="flex justify-center items-center"><div class="w-[1px] rounded-full h-[70px] md:h-[133px] flex" style="background: rgb(230, 208, 175);"></div></div>
-                                        </div><div class="ask-selection flex bg-transparent w-[200px] ">
+                                        </div><div class="ask-selection flex bg-transparent w-[200px] mx-auto">
                                             <div class="ask-option" style="background-color: rgb(84, 95, 27);">
                                                 <a target="_blank" href="https://maps.app.goo.gl/t4BkWV8z9AM99m8p8" class="uppercase text-[#EEDED1] px-2 py-2 font-bold text-base w-full md:w-[150px] opacity-50" aria-disabled="true"><span style="color: rgb(255, 255, 255);">Chỉ đường</span></a>
                                             </div>
@@ -2255,6 +2272,7 @@
     <script src="./lib/jquery/dist/jquery.min.js"></script>
     <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/site.js" asp-append-version="true"></script>
+    <script src="./js/scroll-animations.js"></script>
 
 
 </body>
