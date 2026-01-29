@@ -1,4 +1,4 @@
-﻿.btn-direction {
+.btn-direction {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -13,10 +13,36 @@
     transition: all 0.25s ease;
 }
 
-    .btn-direction:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(0,0,0,.25);
-    }
+.btn-direction:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+
+.footer a {
+    color: #6a4e23;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e6d0af;
+    transition: width 0.3s ease;
+}
+
+.footer a:hover {
+    color: #8b6332;
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
 
 .icon-location {
     width: 16px;
@@ -27,6 +53,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
 .menu-row {
     display: flex;
     align-items: center;
@@ -42,6 +69,7 @@
     font-size: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,.15);
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .menu-icon {
@@ -54,11 +82,14 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    transition: all 0.3s ease;
 }
 
 .menu-toggle {
-    width: 48px;
-    height: 48px;
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px;
+    min-height: 60px;
     border-radius: 50%;
     background: #55601b;
     color: white;
@@ -66,21 +97,30 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    transition: transform .25s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
 .menu-row:hover .menu-text {
-    opacity: .85;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25) !important;
+    transform: translateY(-2px);
 }
 
 .menu-row:hover .menu-icon {
-    opacity: .9;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 20px rgba(0,0,0,.35) !important;
+    transform: scale(1.05);
 }
+
+.menu-toggle:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 20px rgba(0,0,0,.4) !important;
+    transform: scale(1.05);
+}
+
 .zoomable {
     cursor: zoom-in;
 }
 
-/* Popup */
 .image-popup {
     display: none;
     position: fixed;
@@ -91,11 +131,11 @@
     align-items: center;
 }
 
-    .image-popup img {
-        max-width: 90%;
-        max-height: 90%;
-        object-fit: contain;
-    }
+.image-popup img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
 
 .image-popup-close {
     position: absolute;
@@ -106,15 +146,78 @@
     cursor: pointer;
 }
 
-
 .ask-selection {
     margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
-/* Mobile banner images equal height */
-.flex.md\:hidden.w-full.h-\[500px\] img {
-    height: 100% !important;
-    object-fit: cover;
+.bii-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.bii-player .playerIcon {
+    width: 60px !important;
+    height: 60px !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    background: var(--theme-color, #545F1B);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.bii-player .playerIcon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.bii-player .playerIcon::before,
+.bii-player .playerIcon::after {
+    display: none !important;
+}
+
+.bii-player .playerIcon span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.bii-player .playerIcon span[style*="display: none"] {
+    display: none !important;
+}
+
+.bii-player .playerIcon svg {
+    width: 28px !important;
+    height: 28px !important;
+    display: block !important;
+    margin: 0 auto;
+    transform: translateX(1px);
+}
+
+@media (max-width: 768px) {
+    .bii-player .playerIcon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .bii-player .playerIcon svg {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .menu-toggle {
+        width: 70px !important;
+        height: 70px !important;
+    }
 }

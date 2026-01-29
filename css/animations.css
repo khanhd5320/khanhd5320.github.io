@@ -1,4 +1,69 @@
-/* Animation classes for scroll effects */
+/* Keyframes */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation classes */
+.animate-left {
+    opacity: 0;
+    animation: fadeLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-right {
+    opacity: 0;
+    animation: fadeRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-up {
+    opacity: 0;
+    animation: fadeUp 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.2s;
+}
+
+.deco-left {
+    opacity: 0;
+    animation: fadeLeft 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.4s;
+    width: auto;
+}
+
+.deco-right {
+    opacity: 0;
+    animation: fadeRight 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.4s;
+    width: auto;
+}
+
+/* Scroll animation classes */
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
