@@ -12,7 +12,7 @@
 
         .privacy-bg {
             min-height: 100vh;
-            background-image: url('./images/BannerImage1.png');
+            background-image: url('../images/BannerImage1.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -55,7 +55,7 @@
         .privacy-modal::before {
             width: 180px;
             height: 180px;
-            background-image: url('./images/decoLeft1.png');
+            background-image: url('../images/decoLeft1.png');
             bottom: 20px;
             left: 20px;
         }
@@ -63,7 +63,7 @@
         .privacy-modal::after {
             width: 180px;
             height: 180px;
-            background-image: url('./images/decoRight1.png');
+            background-image: url('../images/decoRight1.png');
             top: 20px;
             right: 20px;
         }
@@ -88,7 +88,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('./images/bg-date-banner-1.png');
+            background-image: url('../images/bg-date-banner-1.png');
             background-size: cover;
             background-position: center;
             opacity: 0.5;
@@ -100,7 +100,7 @@
             position: absolute;
             width: 120px;
             height: 120px;
-            background-image: url('./images/deco1.png');
+            background-image: url('../images/deco1.png');
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 1;
@@ -115,7 +115,7 @@
             position: absolute;
             width: 200px;
             height: 200px;
-            background-image: url('./images/deco1(1).png');
+            background-image: url('../images/deco1(1).png');
             background-size: contain;
             background-repeat: no-repeat;
             opacity: 1;
@@ -153,7 +153,7 @@
             text-align: center;
             display: inline-block;
             position: relative;
-            background-image: url('./images/bg1.png');
+            background-image: url('../images/bg1.png');
             background-size: cover;
             background-position: center;
             border-radius: 8px;
