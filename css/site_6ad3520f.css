@@ -1,3 +1,13 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+main {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .btn-direction {
     display: inline-flex;
     align-items: center;
