@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
             button1.style.display = "none";
             button2.style.display = "inline";
             document.removeEventListener("click", playAudioOnce);
+            document.removeEventListener("pointerdown", playAudioOnce);
         };
         document.addEventListener("click", playAudioOnce);
+        document.addEventListener("pointerdown", playAudioOnce);
         button1.onclick = () => {
             audiochangestatus(audio, false);
             button1.style.display = "none";
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let opened = false;
 
-    toggleBtn.addEventListener('pointerdown', () => {
+    toggleBtn.addEventListener('click', () => {
         opened = !opened;
         menu.classList.toggle('hidden');
         icon.style.transform = opened ? 'rotate(90deg)' : 'rotate(0deg)';

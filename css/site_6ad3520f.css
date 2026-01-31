@@ -166,9 +166,15 @@ main {
 
 .bii-player {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 20px;
     z-index: 9999;
+}
+
+@media (min-width: 768px) {
+    .bii-player {
+        bottom: 70px;
+    }
 }
 
 .bii-player .playerIcon {
