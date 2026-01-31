@@ -713,11 +713,11 @@ main {
 }
 
 .story-image-side {
-    height: 300px;
+    height: 450px;
 }
 
 .story-image-center {
-    height: 370px;
+    height: 520px;
 }
 
 /* Tablet: Triangle layout - 1 ảnh to trên, 2 ảnh nhỏ dưới */
@@ -731,14 +731,14 @@ main {
 
     .story-image-center {
         width: 100%;
-        max-width: 450px;
-        height: 400px;
+        max-width: 550px;
+        height: 500px;
         order: -1;
     }
 
     .story-image-side {
         width: calc(50% - 0.5rem);
-        height: 330px;
+        height: 450px;
     }
 }
 
