@@ -122,9 +122,11 @@ main {
     transform: scale(1.05);
 }
 
-.menu-toggle:hover {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 20px rgba(0,0,0,.4) !important;
-    transform: scale(1.05);
+@media (hover: hover) {
+    .menu-toggle:hover {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 20px rgba(0,0,0,.4) !important;
+        transform: scale(1.05);
+    }
 }
 
 .zoomable {
@@ -191,9 +193,11 @@ main {
     transition: all 0.3s ease;
 }
 
-.bii-player .playerIcon:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+@media (hover: hover) {
+    .bii-player .playerIcon:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
 }
 
 .bii-player .playerIcon::before,
