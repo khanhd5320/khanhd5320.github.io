@@ -32,11 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let opened = false;
 
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         opened = !opened;
         menu.classList.toggle('hidden');
         icon.style.transform = opened ? 'rotate(90deg)' : 'rotate(0deg)';
-    });
+    }, true);
 
     document.querySelectorAll('.menu-row').forEach(item => {
         item.addEventListener('click', () => {

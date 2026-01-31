@@ -111,7 +111,9 @@ main {
     touch-action: manipulation;
     pointer-events: auto;
     cursor: pointer;
-    touch-action: manipulation;
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 .menu-row:hover .menu-text {
@@ -197,6 +199,9 @@ main {
     transition: all 0.3s ease;
     touch-action: manipulation;
     pointer-events: auto;
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 @media (hover: hover) {
