@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
             audio.play().catch(() => {});
             button1.style.display = "none";
             button2.style.display = "inline";
+            document.removeEventListener("click", playAudioOnce);
             document.removeEventListener("pointerdown", playAudioOnce);
         };
+        document.addEventListener("click", playAudioOnce);
         document.addEventListener("pointerdown", playAudioOnce);
         button1.onclick = () => {
             audiochangestatus(audio, false);
