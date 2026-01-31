@@ -402,3 +402,295 @@ main {
         height: 450px !important;
     }
 }
+
+/* Story Images Section */
+.story-images-container {
+    max-width: 1270px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Lớp mờ cho content introduction */
+#introduction-contentGroom-introduction,
+#introduction-contentBride-introduction {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* Style cho ảnh man và woman trong introduction */
+#introduction-imageGroom,
+#introduction-imageBride {
+    width: auto !important;
+    max-width: 100%;
+    height: 100% !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (hover: hover) {
+    #introduction-imageGroom:hover,
+    #introduction-imageBride:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Style cho ảnh bank mobile */
+@media (max-width: 767px) {
+    .md\:hidden.flex img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .md\:hidden.flex {
+        gap: 0.5rem;
+        margin-top: 15px;
+    }
+}
+
+/* Style cho ảnh bank desktop */
+#bank-imageGroom,
+#bank-imageBride {
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 100%;
+    display: block;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    #bank-imageGroom,
+    #bank-imageBride {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    #bank-imageGroom,
+    #bank-imageBride {
+        margin-top: 150px !important;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    #bank-imageGroom,
+    #bank-imageBride {
+        margin-top: 100px !important;
+    }
+}
+
+/* Decor cho bank images ở màn 769-1100px */
+@media (min-width: 769px) and (max-width: 1100px) {
+    #bank-container-groom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        background: url('../images/decoLeft1.png') no-repeat center;
+        background-size: contain;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    #bank-container-bride::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: url('../images/decoRight1.png') no-repeat center;
+        background-size: contain;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+/* Background mờ cho title và description bank */
+[id*="title-bank"],
+[id*="description-bank"] {
+    background: rgba(255, 255, 255, 0.35);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Container ảnh bank - flex để căn giữa (chỉ desktop) */
+@media (min-width: 768px) {
+    .relative.w-full.h-full.md\:block.hidden {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Background decor images */
+.story-images-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url('../images/decoLeft1.png') no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    pointer-events: none;
+    animation: floatDecor 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.story-images-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: url('../images/decoRight1.png') no-repeat center;
+    background-size: contain;
+    opacity: 1;
+    pointer-events: none;
+    animation: floatDecor 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+    z-index: -1;
+}
+
+@keyframes floatDecor {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@media (min-width: 768px) {
+    .story-images-container::before,
+    .story-images-container::after {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .story-images-container::before {
+        left: -80px;
+    }
+    
+    .story-images-container::after {
+        right: -80px;
+    }
+}
+
+/* Invitation Banner - giới hạn kích thước */
+#invitation-imageBanner {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 500px;
+    object-position: 50% 0% !important;
+}
+
+@media (min-width: 640px) {
+    #invitation-imageBanner {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    #invitation-imageBanner {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #invitation-imageBanner {
+        max-width: 828px;
+    }
+}
+
+/* Giảm font-size địa chỉ ở màn 900-1000px */
+@media (min-width: 900px) and (max-width: 1000px) {
+    .invitation-address {
+        font-size: 22px !important;
+    }
+}
+
+.story-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.story-image-side {
+    height: 300px;
+}
+
+.story-image-center {
+    height: 370px;
+}
+
+/* Tablet: Triangle layout - 1 ảnh to trên, 2 ảnh nhỏ dưới */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .story-images-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .story-image-center {
+        width: 100%;
+        max-width: 450px;
+        height: 400px;
+        order: -1;
+    }
+    
+    .story-image-side {
+        width: calc(50% - 0.5rem);
+        height: 330px;
+    }
+}
+
+/* Desktop: Row layout */
+@media (min-width: 1024px) {
+    .story-images-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .story-image-side {
+        width: 250px;
+        height: 360px;
+    }
+    
+    .story-image-center {
+        width: 500px;
+        height: 450px;
+    }
+}
