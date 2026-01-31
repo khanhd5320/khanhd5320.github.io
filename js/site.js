@@ -6,15 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (button1 != null && audio != null && button2 != null) {
         const playAudioOnce = (e) => {
-            setTimeout(() => {
-                audio.play().catch(() => {});
-                button1.style.display = "none";
-                button2.style.display = "inline";
-            }, 0);
-            document.removeEventListener("click", playAudioOnce);
+            audio.play().catch(() => {});
+            button1.style.display = "none";
+            button2.style.display = "inline";
             document.removeEventListener("pointerdown", playAudioOnce);
         };
-        document.addEventListener("click", playAudioOnce);
         document.addEventListener("pointerdown", playAudioOnce);
         button1.onclick = () => {
             audiochangestatus(audio, false);
