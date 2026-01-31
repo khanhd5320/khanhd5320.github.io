@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const button2 = document.getElementById("playerVolumeOn");
 
     if (button1 != null && audio != null && button2 != null) {
-        const playAudioOnce = () => {
-            audio.play().catch(() => {});
-            button1.style.display = "none";
-            button2.style.display = "inline";
+        const playAudioOnce = (e) => {
+            setTimeout(() => {
+                audio.play().catch(() => {});
+                button1.style.display = "none";
+                button2.style.display = "inline";
+            }, 0);
             document.removeEventListener("click", playAudioOnce);
             document.removeEventListener("pointerdown", playAudioOnce);
         };
