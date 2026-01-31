@@ -712,12 +712,18 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.story-image-side {
-    height: 450px;
+.story-image-side-left {
+    height: 300px;
+    width:auto;
+}
+.story-image-side-right {
+    height: 515px;
+    width: auto;
 }
 
 .story-image-center {
-    height: 520px;
+    height: 415px;
+    width: auto;
 }
 
 /* Tablet: Triangle layout - 1 ảnh to trên, 2 ảnh nhỏ dưới */
@@ -731,14 +737,18 @@ main {
 
     .story-image-center {
         width: 100%;
-        max-width: 550px;
-        height: 500px;
+        max-width: 450px;
+        height: auto;
         order: -1;
     }
 
-    .story-image-side {
+    .story-image-side-left {
         width: calc(50% - 0.5rem);
-        height: 450px;
+        height: auto;
+    }
+    .story-image-side-right {
+        width: calc(50% - 0.5rem);
+        height: auto;
     }
 }
 
@@ -750,8 +760,12 @@ main {
         justify-content: center;
     }
 
-    .story-image-side {
-        width: 250px;
+    .story-image-side-left {
+        width: 300px;
+        height: auto;
+    }
+    .story-image-side-right {
+        width: 320px;
         height: auto;
     }
 
