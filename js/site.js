@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 popup.style.display = "flex";
                 popupImg.src = img.src;
                 document.body.style.overflow = "hidden";
-                document.body.style.position = "fixed";
-                document.body.style.width = "100%";
             });
         });
 
@@ -73,8 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
             popup.style.display = "none";
             popupImg.src = "";
             document.body.style.overflow = "";
-            document.body.style.position = "";
-            document.body.style.width = "";
         };
 
         closeBtn.onclick = closePopup;
