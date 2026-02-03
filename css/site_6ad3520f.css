@@ -477,15 +477,19 @@ main {
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 }
+.bank-mobile{
+        display: flex;
+        width: 100%;
+}
 
 /* Style cho ảnh bank mobile */
 @media (max-width: 767px) {
-    .md\:hidden.flex img {
+    .bank-mobile img {
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .md\:hidden.flex {
+    .bank-mobile {
         gap: 0.5rem;
         margin-top: 15px;
     }
