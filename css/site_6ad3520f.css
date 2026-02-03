@@ -571,6 +571,9 @@ main {
         align-items: center;
         justify-content: center;
     }
+    .bank-mobile{
+        display: none;
+    }
 }
 
 /* Background decor images */
